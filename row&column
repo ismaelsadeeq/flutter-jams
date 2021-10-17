@@ -1,0 +1,74 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+
+void main() => runApp(MaterialApp(
+  home:Home()
+));
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Colors.amber[500],
+      ),
+      body:Column(
+
+        mainAxisAlignment:MainAxisAlignment.spaceAround ,
+        children: [
+          Row(
+            mainAxisAlignment:MainAxisAlignment.spaceAround ,
+            children: [
+              Text('hello, World'),
+              FlatButton(
+                onPressed: () {},
+                child:Text('Click me'),
+                color: Colors.amber[600],
+              ),
+              Container(
+                color: Colors.cyan,
+                padding: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
+                child: Text('I am the Container'),
+              )
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text(
+              'The First One'
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.pinkAccent,
+            child: Text(
+                'The Second One'
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amber,
+            child: Text(
+                'The Second One'
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton:FloatingActionButton(
+        child: Text('count:'),
+        onPressed: () {},
+        backgroundColor: Colors.amber[600],
+      ),
+
+    );
+  }
+}
+

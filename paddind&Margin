@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+
+void main() => runApp(MaterialApp(
+  home:Home()
+));
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(
+        title: Text('My first app'),
+        centerTitle: true,
+        backgroundColor: Colors.amber[500],
+      ),
+      body:Container(
+        padding: EdgeInsets.all(10.0),
+        margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+        color:Colors.grey[400],
+        child: Text(
+        'Building My application',
+        style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+            color: Colors.grey[600],
+            fontFamily:'IndieFlower'
+           ),
+        ),
+      ),
+      floatingActionButton:FloatingActionButton(
+        child: Text('count:'),
+        onPressed: () {},
+        backgroundColor: Colors.amber[600],
+      ),
+
+    );
+  }
+}
+
