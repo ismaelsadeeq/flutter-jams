@@ -1,0 +1,123 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+
+void main() => runApp(MaterialApp(
+  home:Home()
+));
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(
+        title: Text('Facebook Lite'),
+        centerTitle: true,
+        backgroundColor: Colors.blue[500],
+      ),
+      body:Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(5.0),
+            color: Colors.grey[200],
+            width:500,
+            child: Text(
+              'Tap your Profile Picture to Log In'
+            ),
+          ),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(0),
+                child: IconButton(
+                  onPressed: () {},
+                  icon:Icon(Icons.account_circle_sharp),
+                    color:Colors.blue[600]
+                )
+              ),
+              Container(
+                child: Text(
+                  'Mark Zuckerberg'
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(160, 0, 0, 0),
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                    ':'
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                  padding: EdgeInsets.all(0),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon:Icon(Icons.account_circle_sharp),
+                      color:Colors.blue[600]
+                  )
+              ),
+              Container(
+                child: Text(
+                    'African Coder'
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(200, 0, 0, 0),
+                child: Text(
+                    ':'
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                child:IconButton(
+                    onPressed: () {},
+                    icon:Icon(Icons.add),
+                    color:Colors.blue[600]
+                ) ,
+              ),
+              Container(
+                child: Text(
+                  'Log into your account'
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                child:IconButton(
+                onPressed: () {},
+                icon:Icon(Icons.search),
+                color:Colors.blue[600]
+                ) ,
+              ),
+              Container(
+                child:Text(
+                  'Find Your Account'
+                ),
+              )
+            ],
+          ),
+          Container(
+            child:RaisedButton.icon(
+            onPressed:() {
+              print('Clicked');
+            },
+            icon:Icon(Icons.account_circle_rounded),
+              label: Text('Create a new facebook account'),
+              color:Colors.green,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
